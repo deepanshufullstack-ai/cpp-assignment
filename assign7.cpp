@@ -35,6 +35,41 @@ void calVolume(int r)
     cout << "Volume is " << v;
 }
 
+void printSubString(char str[], int si, int ei = -1)
+{
+    if (ei == -1)
+    {
+        ei = strlen(str) - 1;
+    }
+    for (int i = si; i <= ei; i++)
+    {
+        cout << str[i] << " ";
+    }
+}
+
+void swapTwoArrays(int a[], int b[], int s)
+{
+    int temp;
+    for (int i = 0; i < s; i++)
+    {
+        temp = a[i];
+        a[i] = b[i];
+        b[i] = temp;
+    }
+
+    for (int i = 0; i < s; i++)
+    {
+        cout << a[i] << " ";
+    }
+
+    cout << endl;
+
+    for (int i = 0; i < s; i++)
+    {
+        cout << b[i] << " ";
+    }
+}
+
 void mergeArrays(int a[], int b[], int s)
 {
     int temp;
@@ -68,41 +103,6 @@ void mergeArrays(int a[], int b[], int s)
     }
 }
 
-void swapTwoArrays(int a[], int b[], int s)
-{
-    int temp;
-    for (int i = 0; i < s; i++)
-    {
-        temp = a[i];
-        a[i] = b[i];
-        b[i] = temp;
-    }
-
-    for (int i = 0; i < s; i++)
-    {
-        cout << a[i] << " ";
-    }
-
-    cout << endl;
-
-    for (int i = 0; i < s; i++)
-    {
-        cout << b[i] << " ";
-    }
-}
-
-void printSubString(char str[], int si, int ei = -1)
-{
-    if (ei == -1)
-    {
-        ei = strlen(str) - 1;
-    }
-    for (int i = si; i <= ei; i++)
-    {
-        cout << str[i] << " ";
-    }
-}
-
 int main()
 {
     // int a, b;
@@ -125,22 +125,14 @@ int main()
     // cin>>r2;
     // calVolume(r2);
 
-    // int s;
-    // cout << "Enter size of arrays: ";
-    // cin >> s;
-    // int a[s], b[s];
-    // cout << "Enter " << s << " elements for first array: ";
-    // for (int i = 0; i < s; i++)
-    // {
-    //     cin >> a[i];
-    // }
-
-    // cout << "Enter " << s << " elements for second array: ";
-    // for (int i = 0; i < s; i++)
-    // {
-    //     cin >> b[i];
-    // }
-    // mergeArrays(a, b, s);
+    // char str[10];
+    // int si, ei;
+    // cout << "Enter a string: ";
+    // fgets(str, sizeof(str), stdin);
+    // cout << "Enter start index or end index of subString: ";
+    // cin >> si >> ei;
+    // printSubString(str, si, ei);
+    // printSubString(str, si);
 
     // int s;
     // cout << "Enter size of array: ";
@@ -162,14 +154,22 @@ int main()
 
     // swapTwoArrays(a, b, s);
 
-    char str[10];
-    int si, ei;
-    cout << "Enter a string: ";
-    fgets(str, sizeof(str), stdin);
-    cout << "Enter start index or end index of subString: ";
-    cin >> si >> ei;
-    printSubString(str, si, ei);
-    printSubString(str, si);
+    int s;
+    cout << "Enter size of arrays: ";
+    cin >> s;
+    int a[s], b[s];
+    cout << "Enter " << s << " elements for first array: ";
+    for (int i = 0; i < s; i++)
+    {
+        cin >> a[i];
+    }
+
+    cout << "Enter " << s << " elements for second array: ";
+    for (int i = 0; i < s; i++)
+    {
+        cin >> b[i];
+    }
+    mergeArrays(a, b, s);
 
     return 0;
 }
