@@ -1,159 +1,152 @@
 #include <iostream>
 using namespace std;
 
-class Complex
-{
+// class Complex {
+// private:
+//   int a, b;
+
+// public:
+//   void setData(int x, int y) {
+//     a = x;
+//     b = y;
+//   }
+//   void showData() {
+//     cout << a << endl;
+//     cout << b << endl;
+//   }
+// };
+
+// int main() {
+//   Complex c1;
+//   c1.setData(2, 3);
+//   c1.showData();
+//   return 0;
+// }
+
+// class Time {
+// private:
+//   int h, m, s;
+
+// public:
+//   void setTime(int h1, int m1, int s1) {
+//     h = h1;
+//     m = m1;
+//     s = s1;
+//   }
+//   void showTime() {
+//     cout << "Hour: " << h << endl;
+//     cout << "Minute: " << m << endl;
+//     cout << "Second: " << s << endl;
+//   }
+// };
+
+// int main(){
+//     Time t1;
+//     t1.setTime(2, 45, 5);
+//     t1.showTime();
+//     return 0;
+// }
+
+// class Date {
+// private:
+//   int d, m, y;
+
+// public:
+//   void setDate(int d1, int m1, int y1) {
+//     if (d1 >= 0 && d1 <= 31) {
+//       d = d1;
+//     } else {
+//       d = 1;
+//     }
+
+//     if (m1 >= 0 && m1 <= 12) {
+
+//       m = m1;
+//     } else {
+//       m = 1;
+//     }
+
+//     y = y1;
+//   }
+//   void showDate() {
+//     cout << d << "/" << m << "/" << y << endl;
+//     cout << d << "-" << m << "-" << y << endl;
+//     switch (m) {
+//     case 1:
+//       cout << d << "-" << "Jan" << "-" << y << endl;
+//       break;
+
+//     case 2:
+//       cout << d << "-" << "Fab" << "-" << y << endl;
+//       break;
+
+//     case 3:
+//       cout << d << "-" << "Mar" << "-" << y << endl;
+//       break;
+
+//     case 4:
+//       cout << d << "-" << "April" << "-" << y << endl;
+//       break;
+
+//     case 5:
+//       cout << d << "-" << "May" << "-" << y << endl;
+//       break;
+
+//     case 6:
+//       cout << d << "-" << "June" << "-" << y << endl;
+//       break;
+
+//     case 7:
+//       cout << d << "-" << "July" << "-" << y << endl;
+//       break;
+
+//     case 8:
+//       cout << d << "-" << "Aug" << "-" << y << endl;
+//       break;
+
+//     case 9:
+//       cout << d << "-" << "Sept" << "-" << y << endl;
+//       break;
+
+//     case 10:
+//       cout << d << "-" << "Oct" << "-" << y << endl;
+//       break;
+
+//     case 11:
+//       cout << d << "-" << "Nov" << "-" << y << endl;
+//       break;
+
+//     case 12:
+//       cout << d << "-" << "Dec" << "-" << y << endl;
+//       break;
+//     }
+//   }
+// };
+
+// int main() {
+//   Date d1;
+//   d1.setDate(2, 12, 2006);
+//   d1.showDate();
+//   return 0;
+// }
+
+class Circle {
 private:
-    int a, b;
+  int r;
 
 public:
-    void setValues(int x, int y)
-    {
-        a = x;
-        b = y;
-    }
-    void showValues()
-    {
-        cout << "a=" << a << " & " << "b=" << b;
-    }
+  void setRadius(int r1) { r = r1; }
+  void showRadius() { cout << "Radius: " << r << endl; }
+  float calAreaOfCircle(int r1) { return 3.14 * r * r; }
+  float calCircumferenceOfCircle(int r1) { return 2 * 3.14 * r; }
 };
 
-class Time
-{
-private:
-    int h, m, s;
+int main() {
+  Circle c1;
+  c1.setRadius(10);
+  c1.showRadius();
+  cout << "Area of circle: " << c1.calAreaOfCircle(10) << endl;
+  cout << "Circumference of circle: " << c1.calCircumferenceOfCircle(10)<< endl;
 
-public:
-    void setValues(int x, int y, int z)
-    {
-        h = x;
-        m = y;
-        s = z;
-    }
-    void showValues()
-    {
-        cout << "Time is " << h << " hr " << m << " min " << s << " sec";
-    }
+  return 0;
 };
-
-class Date
-{
-private:
-    int d, m, y;
-
-public:
-    void setValues(int a, int b, int c)
-    {
-        d = a;
-        m = b;
-        y = c;
-    }
-    void showValues()
-    {
-        cout << d << "/" << m << "/" << y << endl;
-    }
-    void shotDate()
-    {
-        cout << d << "-" << m << "-" << y << endl;
-    }
-    void showDateWithMonthName()
-    {
-        switch (m)
-        {
-        case 1:
-            cout << d << "-" << "Jan" << "-" << y << endl;
-            break;
-
-        case 2:
-            cout << d << "-" << "Fab" << "-" << y << endl;
-            break;
-
-        case 3:
-            cout << d << "-" << "Mar" << "-" << y << endl;
-            break;
-
-        case 4:
-            cout << d << "-" << "Apr" << "-" << y << endl;
-            break;
-
-        case 5:
-            cout << d << "-" << "May" << "-" << y << endl;
-            break;
-
-        case 6:
-            cout << d << "-" << "Jun" << "-" << y << endl;
-            break;
-        case 7:
-            cout << d << "-" << "Jul" << "-" << y << endl;
-            break;
-        case 8:
-            cout << d << "-" << "Aug" << "-" << y << endl;
-            break;
-        case 9:
-            cout << d << "-" << "Sep" << "-" << y << endl;
-            break;
-        case 10:
-            cout << d << "-" << "Oct" << "-" << y << endl;
-            break;
-        case 11:
-            cout << d << "-" << "Nov" << "-" << y << endl;
-            break;
-
-        case 12:
-            cout << d << "-" << "Dec" << "-" << y << endl;
-            break;
-
-        default:
-            cout << d << "-" << "Invalid" << "-" << y << endl;
-            break;
-        }
-    }
-};
-
-class Circle
-{
-private:
-    int r;
-
-public:
-    void setRadius(int x)
-    {
-        r = x;
-    }
-    void getRadius()
-    {
-        cout << "Radius is " << r << endl;
-    }
-    float calAreaOfCircle()
-    {
-        return 3.14 * r * r;
-    }
-    float calCir()
-    {
-        return 2 * 3.14 * r;
-    }
-};
-
-int main()
-{
-    // Complex b1;
-    // b1.setValues(3, 4);
-    // b1.showValues();
-
-    // Time t1;
-    // t1.setValues(1, 25, 30);
-    // t1.showValues();
-
-    // Date d1;
-    // d1.setValues(14, 8, 2026);
-    // d1.showValues();
-    // d1.shotDate();
-    // d1.showDateWithMonthName();
-
-    Circle c1;
-    c1.setRadius(5);
-    c1.getRadius();
-    cout << c1.calAreaOfCircle() << endl;
-    cout << c1.calCir() << endl;
-    return 0;
-}
