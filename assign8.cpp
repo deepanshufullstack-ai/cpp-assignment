@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
 // class Complex {
 // private:
@@ -40,11 +40,11 @@ using namespace std;
 //   }
 // };
 
-// int main(){
-//     Time t1;
-//     t1.setTime(2, 45, 5);
-//     t1.showTime();
-//     return 0;
+// int main() {
+//   Time t1;
+//   t1.setTime(2, 45, 5);
+//   t1.showTime();
+//   return 0;
 // }
 
 // class Date {
@@ -130,23 +130,23 @@ using namespace std;
 //   return 0;
 // }
 
-class Circle {
-private:
-  int r;
+// class Circle {
+// private:
+//   int r;
 
-public:
-  void setRadius(int r1) { r = r1; }
-  void showRadius() { cout << "Radius: " << r << endl; }
-  float calAreaOfCircle(int r1) { return 3.14 * r * r; }
-  float calCircumferenceOfCircle(int r1) { return 2 * 3.14 * r; }
-};
+// public:
+//   void setRadius(int r1) { r = r1; }
+//   void showRadius() { cout << "Radius: " << r << endl; }
+//   float calAreaOfCircle(int r1) { return 3.14 * r * r; }
+//   float calCircumferenceOfCircle(int r1) { return 2 * 3.14 * r; }
+// };
 
-int main() {
-  Circle c1;
-  c1.setRadius(10);
-  c1.showRadius();
-  cout << "Area of circle: " << c1.calAreaOfCircle(10) << endl;
-  cout << "Circumference of circle: " << c1.calCircumferenceOfCircle(10)<< endl;
+// int main() {
+//   Circle c1;
+//   c1.setRadius(10);
+//   c1.showRadius();
+//   cout << "Area of circle: " << c1.calAreaOfCircle(10) << endl;
+//   cout << "Circumference of circle: " << c1.calCircumferenceOfCircle(10)<< endl;
 
-  return 0;
-};
+//   return 0;
+// };
