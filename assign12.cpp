@@ -1,205 +1,234 @@
-#include <iostream>
-using namespace std;
-
+// #include<iostream>
+// using namespace std;
 // class Complex {
 //     private:
 //     int a, b;
 //     public:
 //     void setData(int x, int y){
-//         a = x;
-//         b = y;
+//         a=x;
+//         b=y;
 //     }
-//     void getData(){
-//         cout << "The complex number is: " << a << " + " << b << "i" << endl;
+//     void showData(){
+//         cout<<a<<endl;
+//         cout<<b<<endl;
 //     }
-//     Complex operator + (Complex c){
+//     Complex operator+(Complex c){
 //         Complex temp;
-//         temp.a = a + c.a;
-//         temp.b = b + c.b;
+//         temp.a=a+c.a;
+//         temp.b=b+c.b;
 //         return temp;
 //     }
-//     Complex operator - (Complex c){
+//     Complex operator-(Complex c){
 //         Complex temp;
-//         temp.a = a - c.a;
-//         temp.b = b - c.b;
+//         temp.a=a-c.a;
+//         temp.b=b-c.b;
 //         return temp;
 //     }
-//     Complex operator * (Complex c){
+//     Complex operator*(Complex c){
 //         Complex temp;
-//         temp.a = a * c.a - b * c.b;
-//         temp.b = a * c.b + b * c.a;
+//         temp.a=a*c.a - b*c.b;
+//         temp.b=a*c.b + b*c.a;
 //         return temp;
 //     }
-//     bool operator == (Complex c){
-//         if(a == c.a && b == c.b){
+//     bool operator==(Complex c){
+//         if(a==c.a && b==c.b){
 //             return true;
-//         }
-//         else{
+//         } else {
 //             return false;
 //         }
 //     }
 // };
-
 // int main(){
-//     Complex c1, c2, c3;
-//     c1.setData(3, 4);
-//     c2.setData(1, 2);
-//     c3 = c1 + c2;
-//     c3.getData();
-//     c3 = c1 - c2;
-//     c3.getData();
-//     c3 = c1 * c2;
-//     c3.getData();
-//     if(c1 == c2){
-//         cout << "c1 and c2 are equal" << endl;
-//     }
-//     else{
-//         cout << "c1 and c2 are not equal" << endl;
+//     Complex c1, c2;
+//     c1.setData(10, 20);
+//     c2.setData(30, 40);
+//     Complex c3;
+//     c3=c1+c2;
+//     c3.showData();
+//     c3=c1-c2;
+//     c3.showData();
+//     c3=c1*c2;
+//     c3.showData();
+//     if(c1==c2){
+//         cout<<"c1 & c2 are equal";
+//     } else {
+//         cout<<"c1 & c2 are not equal";
 //     }
 //     return 0;
 // }
 
-// class Time
-// {
-// private:
-//     int hours, minutes, seconds;
-
-// public:
-//     void setTime(int h, int m, int s)
-//     {
-//         hours = h;
-//         minutes = m;
-//         seconds = s;
+// #include<iostream>
+// using namespace std;
+// class Time{
+//     private:
+//     int hour, min, second;
+//     public:
+//     void setTime(int h, int m, int s){
+//         hour=h;
+//         min=m;
+//         second=s;
 //     }
-//     void getTime()
-//     {
-//         cout << "The time is: " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds" << endl;
+//     void showTime(){
+//         cout<<hour<<":"<<min<<":"<<second;
 //     }
-//     bool operator>(Time t)
-//     {
-//         if (hours > t.hours)
-//         {
+//     void normalize(){
+//         if (second >= 60) { 
+//             min = min + second / 60; 
+//             second = second % 60; 
+//         } 
+//         if (min >= 60) { 
+//             hour = hour + min / 60; 
+//             min = min % 60; 
+//         } 
+//         if (hour >= 24) { 
+//             hour = hour % 24; 
+//         } 
+//     }
+//     bool operator>(Time t){
+//         if(hour>t.hour){
 //             return true;
-//         }
-//         else if (hours < t.hours)
-//         {
+//         } else if (hour<t.hour){
+//             return false;
+//         } else if(min>t.min){
+//             return true;
+//         } else if(min<t.min){
+//             return false;
+//         } else if(second>t.second){
+//             return true;
+//         } else {
 //             return false;
 //         }
-//         else if (minutes > t.minutes)
-//         {
-//             return true;
-//         }
-//         else if (minutes < t.minutes)
-//         {
-//             return false;
-//         }
-//         else if (seconds > t.seconds)
-//         {
-//             return true;
-//         }
-//         else
-//         {
-//             return false;
-//         }
 //     }
-//     Time operator+(Time t)
-//     {
+//     // pre-increment ++t
+//     Time operator++(){
+//         second++;
+//         normalize();
+//         return *this;
+//     }
+//     // post-increment ++t
+//     Time operator++(int){
+//         Time temp=*this;
+        
+//         second++;
+//         normalize();
+        
+//         return *this;
+//     }
+//     Time operator+(Time t){
 //         Time temp;
-//         temp.hours = hours + t.hours;
-//         temp.minutes = minutes + t.minutes;
-//         temp.seconds = seconds + t.seconds;
-//         if (temp.seconds >= 60)
-//         {
-//             temp.minutes += temp.seconds / 60;
-//             temp.seconds = temp.seconds % 60;
+//         temp.hour=hour+t.hour;
+//         temp.min=min+t.min;
+//         temp.second=second+t.second;
+//         temp.normalize();
+//         return temp;
+//     }
+// };
+// int main(){
+//     Time t1, t2;
+//     t1.setTime(2, 45, 05);
+//     t2.setTime(3, 45, 10);
+//     if(t1>t2){
+//         cout<<"t1 greatest"<<endl;
+//     } else {
+//         cout<<"t2 greatest"<<endl;
+//     }
+    
+//     ++t2;
+//     t2.showTime();
+
+//     cout<<endl;
+    
+//     t2++;
+//     t2.showTime();
+
+//     cout<<endl;
+
+//     Time t3;
+//     t3=t1+t2;
+//     t3.showTime();
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// class Matrix{
+//     private:
+//     int m[2][2];
+//     public:
+//     void setMatrix(){
+//         cout<<"Enter 4 elements: ";
+//         for(int i=0; i<2; i++){
+//             for(int j=0; j<2; j++){
+//                 cin>>m[i][j];
+//             }
 //         }
-//         if (temp.minutes >= 60)
-//         {
-//             temp.hours += temp.minutes / 60;
-//             temp.minutes = temp.minutes % 60;
+//     }
+//     void showMatrix(){
+//         for(int i=0; i<2; i++){
+//             for(int j=0; j<2; j++){
+//                 cout<<m[i][j]<<" ";
+//             }
+//             cout<<endl;
+//         }
+//     }
+//     Matrix operator+(Matrix M){
+//         Matrix temp;
+//         for(int i=0; i<2; i++){
+//             for(int j=0; j<2; j++){
+//                 temp.m[i][j]=m[i][j]+M.m[i][j];
+//             }
+//         }
+//         return temp;
+//     }
+//     Matrix operator-(Matrix M){
+//         Matrix temp;
+//         for(int i=0; i<2; i++){
+//             for(int j=0; j<2; j++){
+//                 temp.m[i][j]=m[i][j]-M.m[i][j];
+//             }
+//         }
+//         return temp;
+//     }
+//     Matrix operator*(Matrix M){
+//         Matrix temp;
+//         int sum, k;
+//         for(int i=0; i<2; i++){
+//             for(int j=0; j<2; j++){
+//                 for(int k=0, sum=0; k<2; k++){
+//                     sum+=m[i][k]*M.m[k][j];
+//                 }
+//                 temp.m[i][j]=sum;
+//             }
 //         }
 //         return temp;
 //     }
 // };
-
-// int main()
-// {
-//     Time t1, t2, t3;
-//     t1.setTime(3, 45, 30);
-//     t2.setTime(4, 30, 15);
-
-//     if (t1 > t2)
-//     {
-//         cout << "t1 is greater than t2" << endl;
-//     }
-//     else
-//     {
-//         cout << "t1 is not greater than t2" << endl;
-//     }
-//     t3 = t1 + t2;
-//     t3.getTime();
+// int main(){
+//     Matrix m1, m2;
+//     m1.setMatrix();
+//     m2.setMatrix();
+//     Matrix m3;
+//     m3=m1+m2;
+//     m3.showMatrix();
+//     m3=m1-m2;
+//     m3.showMatrix();
+//     m3=m1*m2;
+//     m3.showMatrix();
 //     return 0;
 // }
 
-class Matrix {
-    private:
-    int a[2][2];
-    public: 
-    void inputMatrix(){
-        cout<<"Enter 4 elements: ";
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
-                cin>>a[i][j];
-            }
-        }
-    }
-    void displayMatrix(){
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
-                cout<<a[i][j]<<" "; 
-            }
-            cout<<endl;
-        }
-    }
-    Matrix operator + (Matrix m){
-        Matrix temp;
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
-                temp.a[i][j]=a[i][j]+m.a[i][j];
-            }
-        }
-        return temp;
-    }
-    Matrix operator - (Matrix m){
-        Matrix temp;
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
-                temp.a[i][j]=a[i][j]-m.a[i][j];
-            }
-        }
-        return temp;
-    }
-    Matrix operator * (Matrix m){
-        Matrix temp;
-        for(int i=0; i<2; i++){
-            for(int j=0; j<2; j++){
-                temp.a[i][j]=a[i][j]*m.a[i][j];
-            }
-        }
-        return temp;
-    }
-};
-int main(){
-    Matrix m1, m2, m3;
-    m1.inputMatrix();
-    m1.displayMatrix();
-    m2.inputMatrix();
-    m2.displayMatrix();
-    m3=m1+m2;
-    m3.displayMatrix();
-    m3=m1-m2;
-    m3.displayMatrix();
-    m3=m1*m2;
-    m3.displayMatrix();
-    return 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -294,3 +294,36 @@
 //     m3.showMatrix();
 //     return 0;
 // }
+
+
+
+
+
+
+
+class Item {
+    private:
+    int a, b;
+    public:
+    void setData(int x, int y){
+        a=x;
+        b=y;
+    }
+    void showData(){
+        cout<<a<<endl;
+        cout<<b<<endl;
+    }
+    friend void f1(Item);
+}
+void f1(Item i){
+    int s=i.a+i.b;
+    cout<<s<<endl;
+}
+int main(){
+    Item i1, i2;
+    i1.setData(10, 20);
+    f1(i1);
+    i2.setData(30, 40);
+    f1(i2);
+    return 0;
+}

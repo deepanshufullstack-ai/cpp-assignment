@@ -1,32 +1,76 @@
-#include <iostream>
-#include <string.h>
-using namespace std;
+// #include<iostream>
+// using namespace std;
+// class Number {
+//     private:
+//     int size;
+//     int *arr;
+//     public:
+//     Number(int s){
+//         size=s;
+//         arr=new int[size];
+//         for(int i=0; i<size; i++){
+//             arr[i]=0;
+//         }
+//     }
+//     Number(const Number &n){
+//         size=n.size;
+//         arr=new int[size];
+//         for(int i=0; i<size; i++){
+//             arr[i]=n.arr[i];
+//         }
+//     }
+//     void setData(){
+//     cout<<"Enter "<<size<<" numbers: ";
+//     for(int i=0; i<size; i++){
+//     cin>>arr[i];
+//     }
+//     }
+//     void showData(){
+//     cout<<"numbers: ";
+//     for(int i=0; i<size; i++){
+//     cout<<arr[i]<<" ";
+//     }
+//     }
+//     ~Number(){
+//         delete[] arr;
+//     }
+    
+// };
+// int main(){
+//     Number n1(5);
+//     n1.setData();
+//     n1.showData();
+//     return 0;
+// }
 
-// class Student
-// {
+
+// #include <iostream>
+// #include <cstring>
+// using namespace std;
+
+// class Student {
 // private:
-//     int rollno;
-//     char name[20];
+//     int rn;
+//     char n[20];
 
 // public:
-//     Student()
-//     {
-//         cout<<"Enter roll number: ";
-//         cin >> rollno;
-//         cout<<"Enter name: ";
-//         cin >> name;
+//     Student(int rollNo, const char name[]) {
+//         rn = rollNo;
+//         strcpy(n, name);
 //     }
-//     void displayData()
-//     {
-//         cout << "Roll No: " << rollno << endl;
-//         cout << "Name: " << name << endl;
+
+//     void showData() {
+//         cout << "Roll No: " << rn << endl;
+//         cout << "Name: " << n << endl;
 //     }
 // };
 
-// int main()
-// {
-//     Student s1;
-//     s1.displayData();
+// int main() {
+
+//     Student s1(101, "Rahul");
+
+//     s1.showData();
+
 //     return 0;
 // }
 
