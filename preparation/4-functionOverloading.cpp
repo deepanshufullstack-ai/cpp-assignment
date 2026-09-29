@@ -21,3 +21,6 @@ int main(){
     cout<<c.add(10.5, 20.5)<<endl;
     return 0;
 }
+
+// Function overloading
+// Function overloading means having multiple functions with the same name but different parameters.
