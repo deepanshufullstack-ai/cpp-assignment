@@ -209,6 +209,9 @@ int main() {
     }
 
     case 5: {
+      cout << "\nEnter ID to edit: ";
+      cin >> personId;
+
       ifstream read;
       ofstream temp;
       read.open("person.txt", ios::in);
@@ -218,9 +221,79 @@ int main() {
         cout << "\nFile could not be opened";
         return 1;
       }
+
+      Person p;
+      bool found = false;
+
+      while (read >> p.id >> p.name >> p.salary) {
+        if (p.id == personId) {
+          found = true;
+          cout << "Enter updated details:\n";
+          cout << "Enter ID: ";
+          cin >> p.id;
+          cout << "Enter Name: ";
+          cin >> p.name;
+          cout << "Enter Salary: ";
+          cin >> p.salary;
+        }
+        temp << p.id << "\n";
+        temp << p.name << "\n";
+        temp << p.salary << "\n";
+      }
+
+      read.close();
+      temp.close();
+
+      if (found) {
+        remove("person.txt");
+        rename("temp.txt", "person.txt");
+        cout << "\nData updated successfully";
+      } else {
+        cout << "\nPerson not found";
+        remove("temp.txt");
+      }
+      break;
     }
 
     case 6: {
+      cout << "\nEnter ID to delete: ";
+      cin >> personId;
+
+      ifstream read;
+      ofstream temp;
+      read.open("person.txt", ios::in);
+      temp.open("temp.txt", ios::out);
+
+      if (!read || !temp) {
+        cout << "\nFile could not be opened";
+        return 1;
+      }
+
+      Person p;
+      bool found = false;
+
+      while (read >> p.id >> p.name >> p.salary) {
+        if (p.id == personId) {
+          found = true;
+          continue;
+        }
+
+        temp << p.id << "\n";
+        temp << p.name << "\n";
+        temp << p.salary << "\n";
+      }
+      read.close();
+      temp.close();
+
+      if (found) {
+        remove("person.txt");
+        rename("temp.txt", "person.txt");
+        cout << "\nPerson deleted successfully";
+      } else {
+        cout << "\nPerson not found";
+        remove("temp.txt");
+      }
+      break;
     }
 
     case 7: {
