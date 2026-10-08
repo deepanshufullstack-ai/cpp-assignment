@@ -494,6 +494,7 @@ void delete_data(int searchId) {
   }
 }
 
+// Function to extract and add data from one file to another
 void extract_and_add() {
   ifstream sourceFile;
   ofstream destinationFile;
