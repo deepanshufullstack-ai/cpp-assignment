@@ -6,7 +6,8 @@ int main() {
     cout << "\n1. Add Person";
     cout << "\n2. Display All Persons";
     cout << "\n3. Extract Data from file";
-    cout << "\n4. Exit";
+    cout << "\n4. Separate Unmarried persons";
+    cout << "\n5. Exit";
 
     cout << "\n\nEnter your choice: ";
     cin >> choice;
@@ -28,6 +29,11 @@ int main() {
     }
 
     case 4: {
+      separateUnmarried();
+      break;
+    }
+
+    case 5: {
       cout << "\nThank you for using the application.";
       exit(0);
     }
@@ -36,6 +42,6 @@ int main() {
       cout << "\nInvalid choice. Please try again.";
     }
     }
-  } while (choice != 4);
+  } while (choice != 5);
   return 0;
 }

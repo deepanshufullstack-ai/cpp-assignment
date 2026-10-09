@@ -59,13 +59,14 @@ void writeToFile() {
   }
 
   ofstream write;
-  write.open("source.txt", ios::app);
+  write.open("person.txt", ios::app);
   if (!write) {
     cout << "\nFile could not be opened";
     return;
   }
 
   for (int i = 0; i < n; i++) {
+    write << p[i].sno << "\n";
     write << p[i].id << "\n";
     write << p[i].name << "\n";
     write << p[i].age << "\n";
@@ -89,7 +90,7 @@ void writeToFile() {
 
 void readToFile() {
   ifstream read;
-  read.open("source.txt", ios::in);
+  read.open("person.txt", ios::in);
   if (!read) {
     cout << "\nFile could not be opened";
     return;
@@ -149,21 +150,94 @@ void extractToFile() {
   ifstream source;
   ofstream destination;
 
-  source.open("destination.txt", ios::in);
-  destination.open("source.txt", ios::out);
+  source.open("existingData.txt", ios::in);
+  destination.open("person.txt", ios::app);
 
-  if(!source || !destination){
-    cout<<"\nFile could not be opened";
+  if (!source || !destination) {
+    cout << "\nFile could not be opened";
     return;
   }
 
   string data;
 
   while (getline(source, data)) {
-    destination<<data<<endl;
+    destination << data << endl;
   }
 
-  cout<<"\nExtracted successfully";
+  cout << "\nExtracted successfully";
   source.close();
   destination.close();
+}
+
+void separateUnmarried() {
+  ifstream source;
+  ofstream destination;
+
+  source.open("person.txt", ios::in);
+  destination.open("unmarried.txt", ios::out);
+
+  if (!source || !destination) {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+  int count = 0;
+
+  while (source >> p.sno) {
+    source >> p.id;
+
+    source.ignore();
+    getline(source, p.name);
+
+    source >> p.age;
+    source >> p.gender;
+
+    source.ignore();
+    getline(source, p.address);
+
+    source >> p.workingStatus;
+
+    source.ignore();
+    getline(source, p.occupation);
+
+    source >> p.ageCategory;
+
+    source.ignore();
+    getline(source, p.contactNo);
+
+    source >> p.monthlyIncome;
+    source >> p.maritalStatus;
+
+    source >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    if (p.maritalStatus == 1) {
+      destination << p.sno << "\n";
+      destination << p.id << "\n";
+      destination << p.name << "\n";
+      destination << p.age << "\n";
+      destination << p.gender << "\n";
+      destination << p.address << "\n";
+      destination << p.workingStatus << "\n";
+      destination << p.occupation << "\n";
+      destination << p.ageCategory << "\n";
+      destination << p.contactNo << "\n";
+      destination << p.monthlyIncome << "\n";
+      destination << p.maritalStatus << "\n";
+      destination << p.dob.date << " " << p.dob.month << " " << p.dob.year
+                  << "\n";
+      destination << "\n";
+      count++;
+    }
+  }
+
+  source.close();
+  destination.close();
+
+  if (count == 0) {
+    cout << "\nNo unmarried persons found";
+    remove("unmarried.txt");
+  } else {
+    cout << count << " Unmarried extracted successfully" << endl;
+  }
 }
