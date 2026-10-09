@@ -125,8 +125,7 @@ void readToFile() {
 
     read >> p.dob.date >> p.dob.month >> p.dob.year;
 
-    cout << "\n------------------------------------------\n";
-    cout << "SNo: " << p.sno << "\n";
+    cout << "\nSNo: " << p.sno << "\n";
     cout << "ID: " << p.id << "\n";
     cout << "Name: " << p.name << "\n";
     cout << "Age: " << p.age << "\n";
@@ -140,7 +139,6 @@ void readToFile() {
     cout << "Marital Status: " << p.maritalStatus << "\n";
     cout << "Date of Birth: " << p.dob.date << "/" << p.dob.month << "/"
          << p.dob.year << "\n";
-    cout << "\n------------------------------------------\n";
   }
 
   read.close();
@@ -242,8 +240,148 @@ void separateUnmarried() {
   }
 }
 
-void searchFromFile() {}
+void separateUnmarriedByGender(int gender) {
+  ifstream source;
+  ofstream destination;
 
-void deleteFromFile() {}
+  source.open("person.txt", ios::in);
+  destination.open("unmarriedByGender.txt", ios::out);
 
-void updateFromFile() {}
+  if (!source || !destination) {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+  int count = 0;
+
+  while (source >> p.sno) {
+    source >> p.id;
+
+    source.ignore();
+    getline(source, p.name);
+
+    source >> p.age;
+    source >> p.gender;
+
+    source.ignore();
+    getline(source, p.address);
+
+    source >> p.workingStatus;
+
+    source.ignore();
+    getline(source, p.occupation);
+
+    source >> p.ageCategory;
+
+    source.ignore();
+    getline(source, p.contactNo);
+
+    source >> p.monthlyIncome;
+    source >> p.maritalStatus;
+
+    source >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    if (p.maritalStatus == 1 && p.gender == gender) {
+      destination << p.sno << "\n";
+      destination << p.id << "\n";
+      destination << p.name << "\n";
+      destination << p.age << "\n";
+      destination << p.gender << "\n";
+      destination << p.address << "\n";
+      destination << p.workingStatus << "\n";
+      destination << p.occupation << "\n";
+      destination << p.ageCategory << "\n";
+      destination << p.contactNo << "\n";
+      destination << p.monthlyIncome << "\n";
+      destination << p.maritalStatus << "\n";
+      destination << p.dob.date << " " << p.dob.month << " " << p.dob.year
+                  << "\n";
+      destination << "\n";
+      count++;
+    }
+  }
+
+  source.close();
+  destination.close();
+
+  if (count == 0) {
+    cout << "No Unmarried persons found of this gender";
+    remove("unmarriedByGender.txt");
+  } else {
+    cout << count << " Unmarried persons of this gender extracted successfully"
+         << endl;
+  }
+}
+
+void searchFromFile(int id) {
+  ifstream read;
+  read.open("person.txt", ios::in);
+
+  if (!read) {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+  bool found = false;
+
+  while (read >> p.sno) {
+    read >> p.id;
+
+    read.ignore();
+    getline(read, p.name);
+
+    read >> p.age;
+    read >> p.gender;
+
+    read.ignore();
+    getline(read, p.address);
+
+    read >> p.workingStatus;
+
+    read.ignore();
+    getline(read, p.occupation);
+
+    read >> p.ageCategory;
+
+    read.ignore();
+    getline(read, p.contactNo);
+
+    read >> p.monthlyIncome;
+    read >> p.maritalStatus;
+
+    read >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    if (p.id == id) {
+      cout << "\n------------------------------------------\n";
+      cout << "SNo: " << p.sno << "\n";
+      cout << "ID: " << p.id << "\n";
+      cout << "Name: " << p.name << "\n";
+      cout << "Age: " << p.age << "\n";
+      cout << "Gender: " << p.gender << "\n";
+      cout << "Address: " << p.address << "\n";
+      cout << "Working Status: " << p.workingStatus << "\n";
+      cout << "Occupation: " << p.occupation << "\n";
+      cout << "Age Category: " << p.ageCategory << "\n";
+      cout << "Contact Number: " << p.contactNo << "\n";
+      cout << "Monthly Income: " << p.monthlyIncome << "\n";
+      cout << "Marital Status: " << p.maritalStatus << "\n";
+      cout << "Date of Birth: " << p.dob.date << "/" << p.dob.month << "/"
+           << p.dob.year << "\n";
+      cout << "------------------------------------------\n";
+      found = true;
+      break;
+    }
+  }
+
+  read.close();
+
+  if (!found) {
+    cout << "\nNo person found with this ID" << endl;
+  }
+}
+
+void deleteFromFile(int id) { cout << id; }
+
+void updateFromFile(int id) { cout << id; }
