@@ -50,8 +50,7 @@ void writeToFile() {
     cout << "Enter monthly income: ";
     cin >> p[i].monthlyIncome;
 
-    cout << "Enter marital status (1 for unmarried, 2 for married, 3 for "
-            "divorced, 4 for separated): ";
+    cout << "Enter marital status (1 for unmarried, 2 for married, 3 for divorced, 4 for separated): ";
     cin >> p[i].maritalStatus;
 
     cout << "Enter date of birth (dd mm yyyy): ";

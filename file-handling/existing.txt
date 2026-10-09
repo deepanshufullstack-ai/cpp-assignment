@@ -1,0 +1,2103 @@
+PERSON DATASET — 150 FICTIONAL RECORDS
+Field order: sno, id, name, age, gender (1=Male, 2=Female, 3=Other), address, workingStatus (1=Employed, 2=Unemployed), occupation, ageCategory (1=Child, 2=Adult, 3=Senior), contactNo, monthlyIncome, maritalStatus (1=Unmarried, 2=Married, 3=Divorced, 4=Separated), dob (date month year)
+Each record is one field per line; DOB is written on one line as date month year.
+
+1
+101
+Aarav Sharma
+25
+1
+Indore
+1
+Driver
+2
+9876500001
+18000.00
+2
+16 4 2001
+
+2
+102
+Vivaan Verma
+12
+1
+Indore
+2
+Student
+1
+9876500002
+0.00
+1
+19 9 2014
+
+3
+103
+Aditya Patel
+29
+1
+Indore
+1
+Engineer
+2
+9876500003
+20500.00
+1
+14 6 1997
+
+4
+104
+Vihaan Jain
+35
+1
+Indore
+1
+Tailor
+2
+9876500004
+31000.00
+4
+13 9 1991
+
+5
+105
+Arjun Yadav
+53
+1
+Indore
+1
+Software Developer
+2
+9876500005
+42000.00
+3
+26 2 1973
+
+6
+106
+Reyansh Chouhan
+37
+1
+Indore
+1
+Sales Executive
+2
+9876500006
+25500.00
+1
+4 7 1989
+
+7
+107
+Krishna Joshi
+16
+1
+Indore
+2
+Student
+1
+9876500007
+0.00
+1
+14 2 2010
+
+8
+108
+Ishaan Mishra
+53
+1
+Indore
+1
+Sales Executive
+2
+9876500008
+18000.00
+2
+13 1 1973
+
+9
+109
+Priya Gupta
+17
+2
+Indore
+2
+Student
+1
+9876500009
+0.00
+1
+17 7 2009
+
+10
+110
+Nisha Rathore
+15
+2
+Indore
+2
+Student
+1
+9876500010
+0.00
+1
+28 9 2011
+
+11
+111
+Pooja Pawar
+64
+2
+Indore
+2
+Homemaker
+3
+9876500011
+0.00
+2
+1 4 1962
+
+12
+112
+Sneha Solanki
+71
+2
+Indore
+2
+Retired Nurse
+3
+9876500012
+0.00
+2
+12 9 1955
+
+13
+113
+Kunal Soni
+13
+1
+Indore
+2
+Student
+1
+9876500013
+0.00
+1
+19 9 2013
+
+14
+114
+Harsh Mehta
+45
+1
+Indore
+1
+Electrician
+2
+9876500014
+30500.00
+1
+3 6 1981
+
+15
+115
+Manav Kushwaha
+68
+1
+Indore
+2
+Farmer
+3
+9876500015
+8500.00
+2
+24 5 1958
+
+16
+116
+Yash Thakur
+62
+1
+Indore
+2
+Retired Teacher
+3
+9876500016
+0.00
+2
+11 3 1964
+
+17
+117
+Dev Rajput
+33
+1
+Indore
+1
+Farmer
+2
+9876500017
+23000.00
+2
+25 9 1993
+
+18
+118
+Nikhil Bansal
+41
+1
+Indore
+1
+Office Assistant
+2
+9876500018
+28000.00
+2
+1 1 1985
+
+19
+119
+Samar Agrawal
+31
+1
+Indore
+1
+Driver
+2
+9876500019
+33000.00
+1
+26 7 1995
+
+20
+120
+Dhruv Dubey
+14
+1
+Indore
+2
+Student
+1
+9876500020
+0.00
+1
+17 6 2012
+
+21
+121
+Ansh Sharma
+34
+1
+Dewas
+1
+Accountant
+2
+9876500021
+16000.00
+2
+20 6 1992
+
+22
+122
+Khushi Verma
+15
+2
+Dewas
+2
+Student
+1
+9876500022
+0.00
+1
+19 8 2011
+
+23
+123
+Pranav Patel
+13
+1
+Dewas
+2
+Student
+1
+9876500023
+0.00
+1
+7 8 2013
+
+24
+124
+Sahil Jain
+38
+1
+Dewas
+1
+Sales Executive
+2
+9876500024
+34000.00
+1
+20 9 1988
+
+25
+125
+Radhika Yadav
+64
+2
+Dewas
+2
+Homemaker
+3
+9876500025
+0.00
+2
+9 9 1962
+
+26
+126
+Tanya Chouhan
+71
+2
+Dewas
+2
+Retired Nurse
+3
+9876500026
+0.00
+2
+4 9 1955
+
+27
+127
+Varun Joshi
+41
+1
+Dewas
+1
+Office Assistant
+2
+9876500027
+28000.00
+2
+28 1 1985
+
+28
+128
+Gaurav Mishra
+37
+1
+Dewas
+1
+Sales Executive
+2
+9876500028
+25500.00
+1
+20 9 1989
+
+29
+129
+Akash Gupta
+25
+1
+Dewas
+1
+Electrician
+2
+9876500029
+60000.00
+2
+10 2 2001
+
+30
+130
+Palak Rathore
+17
+2
+Dewas
+2
+Student
+1
+9876500030
+0.00
+1
+23 3 2009
+
+31
+131
+Aarav Pawar
+12
+1
+Dewas
+2
+Student
+1
+9876500031
+0.00
+1
+16 4 2014
+
+32
+132
+Vivaan Solanki
+16
+1
+Dewas
+2
+Student
+1
+9876500032
+0.00
+1
+15 7 2010
+
+33
+133
+Aditya Soni
+14
+1
+Dewas
+2
+Student
+1
+9876500033
+0.00
+1
+1 8 2012
+
+34
+134
+Vihaan Mehta
+29
+1
+Dewas
+1
+Engineer
+2
+9876500034
+20500.00
+1
+2 7 1997
+
+35
+135
+Arjun Kushwaha
+62
+1
+Dewas
+2
+Retired Teacher
+3
+9876500035
+0.00
+2
+23 8 1964
+
+36
+136
+Reyansh Thakur
+45
+1
+Dewas
+1
+Electrician
+2
+9876500036
+30500.00
+1
+8 8 1981
+
+37
+137
+Krishna Rajput
+68
+1
+Dewas
+2
+Farmer
+3
+9876500037
+8500.00
+2
+2 9 1958
+
+38
+138
+Ishaan Bansal
+24
+1
+Dewas
+1
+Driver
+2
+9876500038
+63000.00
+2
+16 2 2002
+
+39
+139
+Atharv Agrawal
+33
+1
+Dewas
+1
+Farmer
+2
+9876500039
+23000.00
+2
+20 8 1993
+
+40
+140
+Kabir Dubey
+25
+1
+Dewas
+1
+Driver
+2
+9876500040
+18000.00
+2
+3 9 2001
+
+41
+141
+Pooja Sharma
+64
+2
+Ratlam
+2
+Homemaker
+3
+9876500041
+0.00
+2
+13 9 1962
+
+42
+142
+Sneha Verma
+15
+2
+Ratlam
+2
+Student
+1
+9876500042
+0.00
+1
+9 5 2011
+
+43
+143
+Kunal Patel
+41
+1
+Ratlam
+1
+Office Assistant
+2
+9876500043
+28000.00
+2
+1 4 1985
+
+44
+144
+Harsh Jain
+68
+1
+Ratlam
+2
+Farmer
+3
+9876500044
+8500.00
+2
+1 4 1958
+
+45
+145
+Manav Yadav
+13
+1
+Ratlam
+2
+Student
+1
+9876500045
+0.00
+1
+1 4 2013
+
+46
+146
+Yash Chouhan
+45
+1
+Ratlam
+1
+Electrician
+2
+9876500046
+30500.00
+1
+15 2 1981
+
+47
+147
+Dev Joshi
+14
+1
+Ratlam
+2
+Student
+1
+9876500047
+0.00
+1
+28 9 2012
+
+48
+148
+Nikhil Mishra
+62
+1
+Ratlam
+2
+Retired Teacher
+3
+9876500048
+0.00
+2
+27 2 1964
+
+49
+149
+Samar Gupta
+33
+1
+Ratlam
+1
+Farmer
+2
+9876500049
+23000.00
+2
+23 4 1993
+
+50
+150
+Dhruv Rathore
+29
+1
+Ratlam
+1
+Engineer
+2
+9876500050
+20500.00
+1
+4 4 1997
+
+51
+151
+Ansh Pawar
+54
+1
+Ratlam
+1
+Cook
+2
+9876500051
+41000.00
+1
+5 6 1972
+
+52
+152
+Khushi Solanki
+71
+2
+Ratlam
+2
+Retired Nurse
+3
+9876500052
+0.00
+2
+15 5 1955
+
+53
+153
+Pranav Soni
+37
+1
+Ratlam
+1
+Sales Executive
+2
+9876500053
+25500.00
+1
+27 5 1989
+
+54
+154
+Sahil Mehta
+40
+1
+Ratlam
+2
+Not Working
+2
+9876500054
+0.00
+3
+13 9 1986
+
+55
+155
+Mohit Kushwaha
+29
+1
+Ratlam
+2
+Not Working
+2
+9876500055
+0.00
+1
+11 2 1997
+
+56
+156
+Abhay Thakur
+12
+1
+Ratlam
+2
+Student
+1
+9876500056
+0.00
+1
+17 2 2014
+
+57
+157
+Varun Rajput
+16
+1
+Ratlam
+2
+Student
+1
+9876500057
+0.00
+1
+26 4 2010
+
+58
+158
+Sakshi Bansal
+17
+2
+Ratlam
+2
+Student
+1
+9876500058
+0.00
+1
+5 9 2009
+
+59
+159
+Akash Agrawal
+47
+1
+Ratlam
+2
+Not Working
+2
+9876500059
+0.00
+1
+10 4 1979
+
+60
+160
+Tanish Dubey
+25
+1
+Ratlam
+1
+Driver
+2
+9876500060
+18000.00
+2
+8 7 2001
+
+61
+161
+Aarav Sharma
+33
+1
+Ujjain
+1
+Farmer
+2
+9876500061
+23000.00
+2
+26 1 1993
+
+62
+162
+Vivaan Verma
+25
+1
+Ujjain
+1
+Driver
+2
+9876500062
+18000.00
+2
+20 8 2001
+
+63
+163
+Aditya Patel
+45
+1
+Ujjain
+1
+Electrician
+2
+9876500063
+30500.00
+1
+20 4 1981
+
+64
+164
+Saanvi Jain
+64
+2
+Ujjain
+2
+Homemaker
+3
+9876500064
+0.00
+2
+10 1 1962
+
+65
+165
+Ira Yadav
+71
+2
+Ujjain
+2
+Retired Nurse
+3
+9876500065
+0.00
+2
+25 1 1955
+
+66
+166
+Reyansh Chouhan
+27
+1
+Ujjain
+2
+Not Working
+2
+9876500066
+0.00
+2
+17 6 1999
+
+67
+167
+Krishna Joshi
+14
+1
+Ujjain
+2
+Student
+1
+9876500067
+0.00
+1
+20 6 2012
+
+68
+168
+Riya Mishra
+15
+2
+Ujjain
+2
+Student
+1
+9876500068
+0.00
+1
+27 3 2011
+
+69
+169
+Atharv Gupta
+37
+1
+Ujjain
+1
+Sales Executive
+2
+9876500069
+25500.00
+1
+25 1 1989
+
+70
+170
+Kabir Rathore
+25
+1
+Ujjain
+2
+Not Working
+2
+9876500070
+0.00
+1
+16 5 2001
+
+71
+171
+Rohan Pawar
+16
+1
+Ujjain
+2
+Student
+1
+9876500071
+0.00
+1
+8 2 2010
+
+72
+172
+Rahul Solanki
+62
+1
+Ujjain
+2
+Retired Teacher
+3
+9876500072
+0.00
+2
+28 7 1964
+
+73
+173
+Kunal Soni
+12
+1
+Ujjain
+2
+Student
+1
+9876500073
+0.00
+1
+11 9 2014
+
+74
+174
+Harsh Mehta
+29
+1
+Ujjain
+1
+Engineer
+2
+9876500074
+20500.00
+1
+27 2 1997
+
+75
+175
+Manav Kushwaha
+68
+1
+Ujjain
+2
+Farmer
+3
+9876500075
+8500.00
+2
+8 5 1958
+
+76
+176
+Yash Thakur
+13
+1
+Ujjain
+2
+Student
+1
+9876500076
+0.00
+1
+1 9 2013
+
+77
+177
+Dev Rajput
+41
+1
+Ujjain
+2
+Not Working
+2
+9876500077
+0.00
+1
+5 3 1985
+
+78
+178
+Avni Bansal
+17
+2
+Ujjain
+2
+Student
+1
+9876500078
+0.00
+1
+19 6 2009
+
+79
+179
+Samar Agrawal
+58
+1
+Ujjain
+1
+Sales Executive
+2
+9876500079
+25000.00
+4
+16 5 1968
+
+80
+180
+Dhruv Dubey
+41
+1
+Ujjain
+1
+Office Assistant
+2
+9876500080
+28000.00
+2
+25 5 1985
+
+81
+181
+Ansh Sharma
+25
+1
+Mandsaur
+1
+Driver
+2
+9876500081
+18000.00
+2
+17 6 2001
+
+82
+182
+Ritvik Verma
+68
+1
+Mandsaur
+2
+Farmer
+3
+9876500082
+8500.00
+2
+22 6 1958
+
+83
+183
+Mahi Patel
+15
+2
+Mandsaur
+2
+Student
+1
+9876500083
+0.00
+1
+18 1 2011
+
+84
+184
+Sahil Jain
+29
+1
+Mandsaur
+1
+Engineer
+2
+9876500084
+20500.00
+1
+2 1 1997
+
+85
+185
+Radhika Yadav
+71
+2
+Mandsaur
+2
+Retired Nurse
+3
+9876500085
+0.00
+2
+20 9 1955
+
+86
+186
+Abhay Chouhan
+33
+1
+Mandsaur
+1
+Office Assistant
+2
+9876500086
+49000.00
+2
+3 9 1993
+
+87
+187
+Varun Joshi
+41
+1
+Mandsaur
+1
+Office Assistant
+2
+9876500087
+28000.00
+2
+26 6 1985
+
+88
+188
+Gaurav Mishra
+13
+1
+Mandsaur
+2
+Student
+1
+9876500088
+0.00
+1
+9 6 2013
+
+89
+189
+Akash Gupta
+19
+1
+Mandsaur
+1
+Cook
+2
+9876500089
+35000.00
+2
+25 5 2007
+
+90
+190
+Tanish Rathore
+16
+1
+Mandsaur
+2
+Student
+1
+9876500090
+0.00
+1
+21 1 2010
+
+91
+191
+Aanya Pawar
+64
+2
+Mandsaur
+2
+Homemaker
+3
+9876500091
+0.00
+2
+26 6 1962
+
+92
+192
+Vivaan Solanki
+12
+1
+Mandsaur
+2
+Student
+1
+9876500092
+0.00
+1
+27 7 2014
+
+93
+193
+Diya Soni
+17
+2
+Mandsaur
+2
+Student
+1
+9876500093
+0.00
+1
+14 2 2009
+
+94
+194
+Vihaan Mehta
+62
+1
+Mandsaur
+2
+Retired Teacher
+3
+9876500094
+0.00
+2
+15 8 1964
+
+95
+195
+Arjun Kushwaha
+45
+1
+Mandsaur
+1
+Electrician
+2
+9876500095
+30500.00
+1
+3 7 1981
+
+96
+196
+Reyansh Thakur
+25
+1
+Mandsaur
+2
+Not Working
+2
+9876500096
+0.00
+2
+7 4 2001
+
+97
+197
+Krishna Rajput
+41
+1
+Mandsaur
+2
+Not Working
+2
+9876500097
+0.00
+1
+11 7 1985
+
+98
+198
+Ishaan Bansal
+33
+1
+Mandsaur
+1
+Farmer
+2
+9876500098
+23000.00
+2
+7 1 1993
+
+99
+199
+Atharv Agrawal
+37
+1
+Mandsaur
+1
+Sales Executive
+2
+9876500099
+25500.00
+1
+4 1 1989
+
+100
+200
+Kabir Dubey
+14
+1
+Mandsaur
+2
+Student
+1
+9876500100
+0.00
+1
+5 1 2012
+
+101
+201
+Rohan Sharma
+41
+1
+Mhuw
+1
+Office Assistant
+2
+9876500101
+28000.00
+2
+20 2 1985
+
+102
+202
+Rahul Verma
+25
+1
+Mhuw
+2
+Not Working
+2
+9876500102
+0.00
+3
+18 6 2001
+
+103
+203
+Kunal Patel
+57
+1
+Mhuw
+2
+Not Working
+2
+9876500103
+0.00
+2
+13 6 1969
+
+104
+204
+Harsh Jain
+62
+1
+Mhuw
+2
+Retired Teacher
+3
+9876500104
+0.00
+2
+25 7 1964
+
+105
+205
+Manav Yadav
+47
+1
+Mhuw
+1
+Technician
+2
+9876500105
+34000.00
+2
+25 8 1979
+
+106
+206
+Neha Chouhan
+64
+2
+Mhuw
+2
+Homemaker
+3
+9876500106
+0.00
+2
+10 2 1962
+
+107
+207
+Dev Joshi
+68
+1
+Mhuw
+2
+Farmer
+3
+9876500107
+8500.00
+2
+28 4 1958
+
+108
+208
+Nikhil Mishra
+29
+1
+Mhuw
+1
+Engineer
+2
+9876500108
+20500.00
+1
+14 8 1997
+
+109
+209
+Samar Gupta
+25
+1
+Mhuw
+1
+Driver
+2
+9876500109
+18000.00
+2
+7 3 2001
+
+110
+210
+Dhruv Rathore
+12
+1
+Mhuw
+2
+Student
+1
+9876500110
+0.00
+1
+3 6 2014
+
+111
+211
+Ansh Pawar
+23
+1
+Mhuw
+1
+Office Assistant
+2
+9876500111
+46000.00
+2
+23 7 2003
+
+112
+212
+Ritvik Solanki
+35
+1
+Mhuw
+1
+Police Constable
+2
+9876500112
+30000.00
+1
+26 3 1991
+
+113
+213
+Mahi Soni
+71
+2
+Mhuw
+2
+Retired Nurse
+3
+9876500113
+0.00
+2
+9 7 1955
+
+114
+214
+Sahil Mehta
+27
+1
+Mhuw
+1
+Police Constable
+2
+9876500114
+48000.00
+2
+10 5 1999
+
+115
+215
+Mohit Kushwaha
+25
+1
+Mhuw
+2
+Not Working
+2
+9876500115
+0.00
+2
+8 1 2001
+
+116
+216
+Tanya Thakur
+17
+2
+Mhuw
+2
+Student
+1
+9876500116
+0.00
+1
+14 7 2009
+
+117
+217
+Varun Rajput
+45
+1
+Mhuw
+1
+Electrician
+2
+9876500117
+30500.00
+1
+12 3 1981
+
+118
+218
+Gaurav Bansal
+33
+1
+Mhuw
+1
+Farmer
+2
+9876500118
+23000.00
+2
+19 6 1993
+
+119
+219
+Akash Agrawal
+32
+1
+Mhuw
+1
+Office Assistant
+2
+9876500119
+22000.00
+2
+26 5 1994
+
+120
+220
+Tanish Dubey
+16
+1
+Mhuw
+2
+Student
+1
+9876500120
+0.00
+1
+18 9 2010
+
+121
+221
+Aarav Sharma
+37
+1
+Mhuw
+1
+Sales Executive
+2
+9876500121
+25500.00
+1
+28 9 1989
+
+122
+222
+Vivaan Verma
+13
+1
+Mhuw
+2
+Student
+1
+9876500122
+0.00
+1
+7 5 2013
+
+123
+223
+Diya Patel
+15
+2
+Mhuw
+2
+Student
+1
+9876500123
+0.00
+1
+20 3 2011
+
+124
+224
+Vihaan Jain
+14
+1
+Mhuw
+2
+Student
+1
+9876500124
+0.00
+1
+24 8 2012
+
+125
+225
+Arjun Yadav
+56
+1
+Mhuw
+1
+Engineer
+2
+9876500125
+48000.00
+2
+17 4 1970
+
+126
+226
+Reyansh Chouhan
+45
+1
+Jaora
+1
+Mechanic
+2
+9876500126
+30500.00
+1
+7 2 1981
+
+127
+227
+Krishna Joshi
+29
+1
+Jaora
+1
+Tailor
+2
+9876500127
+20500.00
+1
+17 3 1997
+
+128
+228
+Ishaan Mishra
+28
+1
+Jaora
+2
+Not Working
+2
+9876500128
+0.00
+1
+28 9 1998
+
+129
+229
+Atharv Gupta
+12
+1
+Jaora
+2
+Student
+1
+9876500129
+0.00
+1
+2 1 2014
+
+130
+230
+Kabir Rathore
+36
+1
+Jaora
+2
+Not Working
+2
+9876500130
+0.00
+1
+3 8 1990
+
+131
+231
+Rohan Pawar
+32
+1
+Jaora
+1
+Bank Employee
+2
+9876500131
+27000.00
+1
+6 4 1994
+
+132
+232
+Sneha Solanki
+17
+2
+Jaora
+2
+Student
+1
+9876500132
+0.00
+1
+27 4 2009
+
+133
+233
+Kunal Soni
+41
+1
+Jaora
+1
+Receptionist
+2
+9876500133
+28000.00
+2
+12 5 1985
+
+134
+234
+Tanvi Mehta
+15
+2
+Jaora
+2
+Student
+1
+9876500134
+0.00
+1
+25 7 2011
+
+135
+235
+Manav Kushwaha
+50
+1
+Jaora
+1
+Farmer
+2
+9876500135
+21000.00
+1
+2 2 1976
+
+136
+236
+Yash Thakur
+52
+1
+Jaora
+1
+Engineer
+2
+9876500136
+36000.00
+4
+20 9 1974
+
+137
+237
+Dev Rajput
+41
+1
+Jaora
+1
+Cook
+2
+9876500137
+36000.00
+1
+11 9 1985
+
+138
+238
+Nikhil Bansal
+14
+1
+Jaora
+2
+Student
+1
+9876500138
+0.00
+1
+7 5 2012
+
+139
+239
+Jiya Agrawal
+64
+2
+Jaora
+2
+Homemaker
+3
+9876500139
+0.00
+2
+24 3 1962
+
+140
+240
+Dhruv Dubey
+62
+1
+Jaora
+2
+Retired Teacher
+3
+9876500140
+0.00
+2
+28 1 1964
+
+141
+241
+Ansh Sharma
+16
+1
+Jaora
+2
+Student
+1
+9876500141
+0.00
+1
+1 3 2010
+
+142
+242
+Khushi Verma
+71
+2
+Jaora
+2
+Retired Nurse
+3
+9876500142
+0.00
+2
+22 5 1955
+
+143
+243
+Pranav Patel
+34
+1
+Jaora
+1
+Software Developer
+2
+9876500143
+65000.00
+2
+11 6 1992
+
+144
+244
+Sahil Jain
+68
+1
+Jaora
+2
+Farmer
+3
+9876500144
+8500.00
+2
+2 9 1958
+
+145
+245
+Mohit Yadav
+37
+1
+Jaora
+1
+Software Developer
+2
+9876500145
+25500.00
+1
+12 5 1989
+
+146
+246
+Abhay Chouhan
+33
+1
+Jaora
+1
+Police Constable
+2
+9876500146
+23000.00
+2
+22 6 1993
+
+147
+247
+Varun Joshi
+50
+1
+Jaora
+2
+Not Working
+2
+9876500147
+0.00
+1
+7 1 1976
+
+148
+248
+Gaurav Mishra
+13
+1
+Jaora
+2
+Student
+1
+9876500148
+0.00
+1
+1 2 2013
+
+149
+249
+Akash Gupta
+48
+1
+Jaora
+1
+Electrician
+2
+9876500149
+57000.00
+2
+1 2 1978
+
+150
+250
+Tanish Rathore
+25
+1
+Jaora
+1
+Electrician
+2
+9876500150
+18000.00
+2
+24 3 2001
