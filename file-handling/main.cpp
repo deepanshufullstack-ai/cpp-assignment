@@ -7,7 +7,10 @@ int main() {
     cout << "\n2. Display All Persons";
     cout << "\n3. Extract Data from file";
     cout << "\n4. Separate Unmarried persons";
-    cout << "\n5. Exit";
+    cout << "\n5. Search person by ID";
+    cout << "\n6. Delete person by ID";
+    cout << "\n7. Update person by ID";
+    cout << "\n8. Exit";
 
     cout << "\n\nEnter your choice: ";
     cin >> choice;
@@ -34,6 +37,21 @@ int main() {
     }
 
     case 5: {
+      searchFromFile();
+      break;
+    }
+
+    case 6: {
+      deleteFromFile();
+      break;
+    }
+
+    case 7: {
+      updateFromFile();
+      break;
+    }
+
+    case 8: {
       cout << "\nThank you for using the application.";
       exit(0);
     }
@@ -42,6 +60,6 @@ int main() {
       cout << "\nInvalid choice. Please try again.";
     }
     }
-  } while (choice != 5);
+  } while (choice != 8);
   return 0;
 }

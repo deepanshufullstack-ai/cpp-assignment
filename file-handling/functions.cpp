@@ -241,3 +241,9 @@ void separateUnmarried() {
     cout << count << " Unmarried extracted successfully" << endl;
   }
 }
+
+void searchFromFile() {}
+
+void deleteFromFile() {}
+
+void updateFromFile() {}
