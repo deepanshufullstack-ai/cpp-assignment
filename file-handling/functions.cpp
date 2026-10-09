@@ -1,0 +1,169 @@
+#include "struct.cpp"
+#include <fstream>
+#include <string>
+
+void writeToFile() {
+  int n;
+  cout << "\nEnter number of persons: ";
+  cin >> n;
+
+  Person *p = new Person[n];
+
+  int sno = 1;
+
+  for (int i = 0; i < n; i++) {
+    cout << "\nEnter details of person: " << i + 1 << endl;
+
+    p[i].sno = sno++;
+
+    cout << "Enter ID: ";
+    cin >> p[i].id;
+
+    cout << "Enter name: ";
+    cin.ignore();
+    getline(cin, p[i].name);
+
+    cout << "Enter age: ";
+    cin >> p[i].age;
+
+    cout << "Enter gender (1 for male, 2 for female, 3 for other): ";
+    cin >> p[i].gender;
+
+    cout << "Enter address: ";
+    cin.ignore();
+    getline(cin, p[i].address);
+
+    cout << "Enter working status (1 for employed, 2 for unemployed): ";
+    cin >> p[i].workingStatus;
+
+    cout << "Enter occupation: ";
+    cin.ignore();
+    getline(cin, p[i].occupation);
+
+    cout << "Enter age category (1 for child, 2 for adult, 3 for senior): ";
+    cin >> p[i].ageCategory;
+
+    cout << "Enter contact number: ";
+    cin.ignore();
+    getline(cin, p[i].contactNo);
+
+    cout << "Enter monthly income: ";
+    cin >> p[i].monthlyIncome;
+
+    cout << "Enter marital status (1 for unmarried, 2 for married, 3 for "
+            "divorced, 4 for separated): ";
+    cin >> p[i].maritalStatus;
+
+    cout << "Enter date of birth (dd mm yyyy): ";
+    cin >> p[i].dob.date >> p[i].dob.month >> p[i].dob.year;
+  }
+
+  ofstream write;
+  write.open("source.txt", ios::app);
+  if (!write) {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  for (int i = 0; i < n; i++) {
+    write << p[i].id << "\n";
+    write << p[i].name << "\n";
+    write << p[i].age << "\n";
+    write << p[i].gender << "\n";
+    write << p[i].address << "\n";
+    write << p[i].workingStatus << "\n";
+    write << p[i].occupation << "\n";
+    write << p[i].ageCategory << "\n";
+    write << p[i].contactNo << "\n";
+    write << p[i].monthlyIncome << "\n";
+    write << p[i].maritalStatus << "\n";
+    write << p[i].dob.date << " " << p[i].dob.month << " " << p[i].dob.year
+          << "\n";
+    write << "\n";
+  }
+
+  write.close();
+  cout << "\nData written successfully";
+  delete[] p;
+}
+
+void readToFile() {
+  ifstream read;
+  read.open("source.txt", ios::in);
+  if (!read) {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+
+  while (read >> p.sno) {
+    read >> p.id;
+
+    read.ignore();
+    getline(read, p.name);
+
+    read >> p.age;
+    read >> p.gender;
+
+    read.ignore();
+    getline(read, p.address);
+
+    read >> p.workingStatus;
+
+    read.ignore();
+    getline(read, p.occupation);
+
+    read >> p.ageCategory;
+
+    read.ignore();
+    getline(read, p.contactNo);
+
+    read >> p.monthlyIncome;
+    read >> p.maritalStatus;
+
+    read >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    cout << "\n------------------------------------------\n";
+    cout << "SNo: " << p.sno << "\n";
+    cout << "ID: " << p.id << "\n";
+    cout << "Name: " << p.name << "\n";
+    cout << "Age: " << p.age << "\n";
+    cout << "Gender: " << p.gender << "\n";
+    cout << "Address: " << p.address << "\n";
+    cout << "Working Status: " << p.workingStatus << "\n";
+    cout << "Occupation: " << p.occupation << "\n";
+    cout << "Age Category: " << p.ageCategory << "\n";
+    cout << "Contact Number: " << p.contactNo << "\n";
+    cout << "Monthly Income: " << p.monthlyIncome << "\n";
+    cout << "Marital Status: " << p.maritalStatus << "\n";
+    cout << "Date of Birth: " << p.dob.date << "/" << p.dob.month << "/"
+         << p.dob.year << "\n";
+    cout << "\n------------------------------------------\n";
+  }
+
+  read.close();
+}
+
+void extractToFile() {
+  ifstream source;
+  ofstream destination;
+
+  source.open("destination.txt", ios::in);
+  destination.open("source.txt", ios::out);
+
+  if(!source || !destination){
+    cout<<"\nFile could not be opened";
+    return;
+  }
+
+  string data;
+
+  while (getline(source, data)) {
+    destination<<data<<endl;
+  }
+
+  cout<<"\nExtracted successfully";
+  source.close();
+  destination.close();
+}
