@@ -2,7 +2,8 @@
 #include <fstream>
 #include <string>
 
-void writeToFile() {
+void writeToFile()
+{
   int n;
   cout << "\nEnter number of persons: ";
   cin >> n;
@@ -11,7 +12,8 @@ void writeToFile() {
 
   int sno = 1;
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++)
+  {
     cout << "\nEnter details of person: " << i + 1 << endl;
 
     p[i].sno = sno++;
@@ -59,12 +61,14 @@ void writeToFile() {
 
   ofstream write;
   write.open("person.txt", ios::app);
-  if (!write) {
+  if (!write)
+  {
     cout << "\nFile could not be opened";
     return;
   }
 
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++)
+  {
     write << p[i].sno << "\n";
     write << p[i].id << "\n";
     write << p[i].name << "\n";
@@ -87,17 +91,20 @@ void writeToFile() {
   delete[] p;
 }
 
-void readToFile() {
+void readToFile()
+{
   ifstream read;
   read.open("person.txt", ios::in);
-  if (!read) {
+  if (!read)
+  {
     cout << "\nFile could not be opened";
     return;
   }
 
   Person p;
 
-  while (read >> p.sno) {
+  while (read >> p.sno)
+  {
     read >> p.id;
 
     read.ignore();
@@ -143,21 +150,24 @@ void readToFile() {
   read.close();
 }
 
-void extractToFile() {
+void extractToFile()
+{
   ifstream source;
   ofstream destination;
 
   source.open("existingData.txt", ios::in);
   destination.open("person.txt", ios::app);
 
-  if (!source || !destination) {
+  if (!source || !destination)
+  {
     cout << "\nFile could not be opened";
     return;
   }
 
   string data;
 
-  while (getline(source, data)) {
+  while (getline(source, data))
+  {
     destination << data << endl;
   }
 
@@ -166,14 +176,16 @@ void extractToFile() {
   destination.close();
 }
 
-void separateUnmarried() {
+void separateUnmarried()
+{
   ifstream source;
   ofstream destination;
 
   source.open("person.txt", ios::in);
   destination.open("unmarried.txt", ios::out);
 
-  if (!source || !destination) {
+  if (!source || !destination)
+  {
     cout << "\nFile could not be opened";
     return;
   }
@@ -181,7 +193,8 @@ void separateUnmarried() {
   Person p;
   int count = 0;
 
-  while (source >> p.sno) {
+  while (source >> p.sno)
+  {
     source >> p.id;
 
     source.ignore();
@@ -208,7 +221,8 @@ void separateUnmarried() {
 
     source >> p.dob.date >> p.dob.month >> p.dob.year;
 
-    if (p.maritalStatus == 1) {
+    if (p.maritalStatus == 1)
+    {
       destination << p.sno << "\n";
       destination << p.id << "\n";
       destination << p.name << "\n";
@@ -231,22 +245,27 @@ void separateUnmarried() {
   source.close();
   destination.close();
 
-  if (count == 0) {
+  if (count == 0)
+  {
     cout << "\nNo unmarried persons found";
     remove("unmarried.txt");
-  } else {
+  }
+  else
+  {
     cout << count << " Unmarried extracted successfully" << endl;
   }
 }
 
-void separateUnmarriedByGender(int gender) {
+void separateUnmarriedByGender(int gender)
+{
   ifstream source;
   ofstream destination;
 
   source.open("person.txt", ios::in);
   destination.open("unmarriedByGender.txt", ios::out);
 
-  if (!source || !destination) {
+  if (!source || !destination)
+  {
     cout << "\nFile could not be opened";
     return;
   }
@@ -254,7 +273,8 @@ void separateUnmarriedByGender(int gender) {
   Person p;
   int count = 0;
 
-  while (source >> p.sno) {
+  while (source >> p.sno)
+  {
     source >> p.id;
 
     source.ignore();
@@ -281,7 +301,8 @@ void separateUnmarriedByGender(int gender) {
 
     source >> p.dob.date >> p.dob.month >> p.dob.year;
 
-    if (p.maritalStatus == 1 && p.gender == gender) {
+    if (p.maritalStatus == 1 && p.gender == gender)
+    {
       destination << p.sno << "\n";
       destination << p.id << "\n";
       destination << p.name << "\n";
@@ -304,20 +325,127 @@ void separateUnmarriedByGender(int gender) {
   source.close();
   destination.close();
 
-  if (count == 0) {
+  if (count == 0)
+  {
     cout << "No Unmarried persons found of this gender";
     remove("unmarriedByGender.txt");
-  } else {
+  }
+  else
+  {
     cout << count << " Unmarried persons of this gender extracted successfully"
          << endl;
   }
 }
 
-void searchFromFile(int id) {
+void separateUnmarriedByCity(string city)
+{
+  ifstream source;
+  ofstream destination;
+
+  source.open("person.txt", ios::in);
+  destination.open("unmarriedByCity.txt", ios::out);
+
+  if (!source || !destination)
+  {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+  int count = 0;
+
+  while (source >> p.sno)
+  {
+    source >> p.id;
+
+    source.ignore();
+    getline(source, p.name);
+
+    source >> p.age;
+    source >> p.gender;
+
+    source.ignore();
+    getline(source, p.address);
+
+    source >> p.workingStatus;
+
+    source.ignore();
+    getline(source, p.occupation);
+
+    source >> p.ageCategory;
+
+    source.ignore();
+    getline(source, p.contactNo);
+
+    source >> p.monthlyIncome;
+    source >> p.maritalStatus;
+
+    source >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    // Check unmarried status and city
+    if (p.maritalStatus == 1
+        // && p.address.find(city) != string::npos
+        && p.address == city)
+    {
+      destination << p.sno << "\n";
+      destination << p.id << "\n";
+      destination << p.name << "\n";
+      destination << p.age << "\n";
+      destination << p.gender << "\n";
+      destination << p.address << "\n";
+      destination << p.workingStatus << "\n";
+      destination << p.occupation << "\n";
+      destination << p.ageCategory << "\n";
+      destination << p.contactNo << "\n";
+      destination << p.monthlyIncome << "\n";
+      destination << p.maritalStatus << "\n";
+
+      destination << p.dob.date << " "
+                  << p.dob.month << " "
+                  << p.dob.year << "\n\n";
+
+      count++;
+    }
+  }
+
+  source.close();
+  destination.close();
+
+  // if (count == 0)
+  // {
+  //   cout << "\nNo unmarried persons found in "
+  //        << city << endl;
+
+  //   remove("unmarriedByCity.txt");
+  // }
+  // else
+  // {
+  //   cout << "\n"
+  //        << count
+  //        << " unmarried persons from "
+  //        << city
+  //        << " extracted successfully"
+  //        << endl;
+  // }
+  if (count == 0)
+  {
+    cout << "No Unmarried persons found of this city";
+    remove("unmarriedByCity.txt");
+  }
+  else
+  {
+    cout << count << " Unmarried persons of this city extracted successfully"
+         << endl;
+  }
+}
+
+void searchFromFile(int id)
+{
   ifstream read;
   read.open("person.txt", ios::in);
 
-  if (!read) {
+  if (!read)
+  {
     cout << "\nFile could not be opened";
     return;
   }
@@ -325,7 +453,8 @@ void searchFromFile(int id) {
   Person p;
   bool found = false;
 
-  while (read >> p.sno) {
+  while (read >> p.sno)
+  {
     read >> p.id;
 
     read.ignore();
@@ -352,7 +481,8 @@ void searchFromFile(int id) {
 
     read >> p.dob.date >> p.dob.month >> p.dob.year;
 
-    if (p.id == id) {
+    if (p.id == id)
+    {
       cout << "\n------------------------------------------\n";
       cout << "SNo: " << p.sno << "\n";
       cout << "ID: " << p.id << "\n";
@@ -376,7 +506,8 @@ void searchFromFile(int id) {
 
   read.close();
 
-  if (!found) {
+  if (!found)
+  {
     cout << "\nNo person found with this ID" << endl;
   }
 }

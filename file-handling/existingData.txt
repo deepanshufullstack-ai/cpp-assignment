@@ -1,7 +1,3 @@
-PERSON DATASET — 150 FICTIONAL RECORDS
-Field order: sno, id, name, age, gender (1=Male, 2=Female, 3=Other), address, workingStatus (1=Employed, 2=Unemployed), occupation, ageCategory (1=Child, 2=Adult, 3=Senior), contactNo, monthlyIncome, maritalStatus (1=Unmarried, 2=Married, 3=Divorced, 4=Separated), dob (date month year)
-Each record is one field per line; DOB is written on one line as date month year.
-
 1
 101
 Aarav Sharma
