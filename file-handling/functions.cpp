@@ -512,6 +512,133 @@ void searchFromFile(int id)
   }
 }
 
+void findAvg(string city)
+{
+  ifstream source;
+  source.open("person.txt", ios::in);
+
+  if (!source)
+  {
+    cout << "\nFile could not be opened";
+    return;
+  }
+
+  Person p;
+
+  double indoreMax = 0;
+  double dewasMax = 0;
+  double ratlamMax = 0;
+  double ujjainMax = 0;
+  double mandsaurMax = 0;
+  double mhuwMax = 0;
+  double jaoraMax = 0;
+  double avg = 1;
+  double sum = 0;
+  double avgOfAll = 1;
+
+  while (source >> p.sno)
+  {
+    source >> p.id;
+
+    source.ignore();
+    getline(source, p.name);
+
+    source >> p.age;
+    source >> p.gender;
+
+    source.ignore();
+    getline(source, p.address);
+
+    source >> p.workingStatus;
+
+    source.ignore();
+    getline(source, p.occupation);
+
+    source >> p.ageCategory;
+
+    source.ignore();
+    getline(source, p.contactNo);
+
+    source >> p.monthlyIncome;
+    source >> p.maritalStatus;
+
+    source >> p.dob.date >> p.dob.month >> p.dob.year;
+
+    if (p.address == city)
+    {
+      if (p.monthlyIncome > ratlamMax)
+      {
+        ratlamMax = p.monthlyIncome;
+      }
+    }
+
+    // if (p.address == "Indore")
+    // {
+    //   if (p.monthlyIncome > indoreMax)
+    //   {
+    //     indoreMax = p.monthlyIncome;
+    //   }
+    // }
+
+    // if (p.address == "Ujjain")
+    // {
+    //   if (p.monthlyIncome > ujjainMax)
+    //   {
+    //     ujjainMax = p.monthlyIncome;
+    //   }
+    // }
+
+    // if (p.address == "Dewas")
+    // {
+    //   if (p.monthlyIncome > dewasMax)
+    //   {
+    //     dewasMax = p.monthlyIncome;
+    //   }
+    // }
+
+    // if (p.address == "Mandsaur")
+    // {
+    //   if (p.monthlyIncome > mandsaurMax)
+    //   {
+    //     mandsaurMax = p.monthlyIncome;
+    //   }
+    // }
+
+    // if (p.address == "Jaora")
+    // {
+    //   if (p.monthlyIncome > jaoraMax)
+    //   {
+    //     jaoraMax = p.monthlyIncome;
+    //   }
+    // }
+
+    // if (p.address == "Mhuw")
+    // {
+    //   if (p.monthlyIncome > mhuwMax)
+    //   {
+    //     mhuwMax = p.monthlyIncome;
+    //   }
+    // }
+
+    sum = sum + p.monthlyIncome;
+  }
+
+  source.close();
+
+  avg = (indoreMax + dewasMax + ratlamMax + ujjainMax + mandsaurMax + mhuwMax + jaoraMax) / 7;
+  avgOfAll = sum / 150;
+
+  cout << "Indore: " << indoreMax << endl;
+  cout << "Dewas: " << dewasMax << endl;
+  cout << "Ratlam: " << ratlamMax << endl;
+  cout << "Ujjain: " << ujjainMax << endl;
+  cout << "Mandsaur: " << mandsaurMax << endl;
+  cout << "Mhuw: " << mhuwMax << endl;
+  cout << "Jaora: " << jaoraMax << endl;
+  cout << "Avg of all this cities: " << avg << endl;
+  cout << "Avg of all person income: " << avgOfAll << endl;
+}
+
 void deleteFromFile(int id) { cout << id; }
 
 void updateFromFile(int id) { cout << id; }

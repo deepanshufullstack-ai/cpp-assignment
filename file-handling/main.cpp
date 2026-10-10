@@ -14,7 +14,8 @@ int main()
     cout << "\n7. Search person by ID";
     cout << "\n8. Delete person by ID";
     cout << "\n9. Update person by ID";
-    cout << "\n10. Exit";
+    cout << "\n10. Find avg income of all the person";
+    cout << "\n11. Exit";
 
     cout << "\n\nEnter your choice: ";
     cin >> choice;
@@ -95,7 +96,12 @@ int main()
       break;
     }
 
-    case 10:
+    case 10: {
+      findAvg("Ratlam");
+      break;
+    }
+
+    case 11:
     {
       cout << "\nThank you for using the application.";
       exit(0);
@@ -106,6 +112,6 @@ int main()
       cout << "\nInvalid choice. Please try again.";
     }
     }
-  } while (choice != 10);
+  } while (choice != 11);
   return 0;
 }
